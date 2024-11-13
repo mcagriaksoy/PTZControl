@@ -2,6 +2,7 @@
     "files.associations": {
         "xutility": "cpp",
         "atomic": "cpp",
-        "memory": "cpp"
+        "memory": "cpp",
+        "iosfwd": "cpp"
     }
 }

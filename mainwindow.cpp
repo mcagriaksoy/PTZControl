@@ -10,6 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
     workerThread(nullptr)
 {
     ui->setupUi(this);
+    this->setFocusPolicy(Qt::StrongFocus);
 
     connect(ui->connectButton, &QPushButton::clicked, this, &MainWindow::on_connectButton_clicked);
     connect(ui->stopButton, &QPushButton::clicked, this, &MainWindow::on_stopButton_clicked);
@@ -29,6 +30,15 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->leftButton, &QPushButton::clicked, this, [this]() { on_movement_handler("FF010004121027"); });
     connect(ui->rightButton, &QPushButton::clicked, this, [this]() { on_movement_handler("FF010002132036"); });
     connect(ui->noneButton, &QPushButton::clicked, this, [this]() { on_movement_handler("FF010000000001"); });
+    connect(ui->stopAllButton, &QPushButton::clicked, this, [this]() { on_movement_handler("FF010000000001"); });
+    connect(ui->zoomInButton, &QPushButton::clicked, this, [this]() { on_movement_handler("FF010020000021"); });
+    connect(ui->zoomOutButton, &QPushButton::clicked, this, [this]() { on_movement_handler("FF010040000041"); });
+    connect(ui->focusInButton, &QPushButton::clicked, this, [this]() { on_movement_handler("FF010080000081"); });
+    connect(ui->focusOutButton, &QPushButton::clicked, this, [this]() { on_movement_handler("FF010100000103"); });
+
+    // Checkboxes
+    connect(ui->keyboardCheckBox, &QCheckBox::stateChanged, this, &MainWindow::on_keyboard_handler);
+    connect(ui->presetEnableCheckBox, &QCheckBox::stateChanged, this, &MainWindow::on_set_limit_handler);
 
     // Detect serial ports in beginning
     detectSerialPorts();
@@ -109,6 +119,7 @@ void MainWindow::on_connectButton_clicked()
     ui->downButton->setEnabled(true);
     ui->leftButton->setEnabled(true);
     ui->rightButton->setEnabled(true);
+    ui->noneButton->setEnabled(true);
 
     // Set text on label with green color
     ui->statusLabel->setStyleSheet("QLabel { color : green; }");
@@ -137,6 +148,7 @@ void MainWindow::on_stopButton_clicked()
     ui->downButton->setEnabled(false);
     ui->leftButton->setEnabled(false);
     ui->rightButton->setEnabled(false);
+    ui->noneButton->setEnabled(false);
 
     // Enable Comboboxes
     ui->PortComboBox->setEnabled(true);
@@ -170,4 +182,73 @@ void MainWindow::on_advancedViewButton_clicked()
 {
     // Show advanced view
     QMessageBox::information(this, "Advanced View", "This feature is not available yet.");
+}
+
+void MainWindow::keyPressEvent(QKeyEvent *event)
+{
+    switch(event->key()) {
+        case Qt::Key_Up:
+            on_movement_handler("FF010008101029");
+            break;
+        case Qt::Key_Down:
+            on_movement_handler("FF010010101031");
+            break;
+        case Qt::Key_Left:
+            on_movement_handler("FF010004121027");
+            break;
+        case Qt::Key_Right:
+            on_movement_handler("FF010002132036");
+            break;
+        default:
+            on_movement_handler("FF010000000001");
+            break;
+    }
+}
+
+void MainWindow::on_keyboard_handler(void)
+{
+    // Enable or disable keyboard control
+    if (ui->keyboardCheckBox->isChecked()) {
+        // Enable keyboard control
+        ui->textBrowser->append("Keyboard control enabled.");
+
+        // Connect keyboard events
+
+    } else {
+        // Disable keyboard control
+        ui->textBrowser->append("Keyboard control disabled.");
+    }
+}
+
+void MainWindow::on_set_limit_handler(void)
+{
+    // Enable or disable preset limit control
+    if (ui->presetEnableCheckBox->isChecked()) {
+        // Enable preset limit control
+        ui->textBrowser->append("Preset limit control enabled.");
+
+        // Enable LineEdits
+        ui->leftLineEdit->setEnabled(true);
+        ui->rightLineEdit->setEnabled(true);
+
+        // Read the values from LineEdits
+        int leftLimit = ui->leftLineEdit->text().toInt();
+        int rightLimit = ui->rightLineEdit->text().toInt();
+
+        // Check if the values are valid
+        if (leftLimit < 0 || leftLimit > 360 || rightLimit < 0 || rightLimit > 360) {
+            QMessageBox::warning(this, "Warning", "Please enter a valid degree value between 0 and 360.");
+            return;
+        }
+
+        // Todo add preset 202,203,204 functionality.
+
+    } else {
+        // Disable preset limit control
+        ui->textBrowser->append("Preset limit control disabled.");
+
+        // Disable LineEdits
+        ui->leftLineEdit->setEnabled(false);
+        ui->rightLineEdit->setEnabled(false);
+    }
 }
