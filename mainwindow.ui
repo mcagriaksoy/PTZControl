@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>717</width>
-    <height>385</height>
+    <width>622</width>
+    <height>352</height>
    </rect>
   </property>
   <property name="font">
@@ -30,7 +30,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>110</y>
+      <y>90</y>
       <width>351</width>
       <height>121</height>
      </rect>
@@ -38,63 +38,11 @@
     <property name="title">
      <string>PT Movements</string>
     </property>
-    <widget class="QPushButton" name="pushButton_3">
+    <widget class="QCheckBox" name="keyboardCheckBox">
      <property name="geometry">
       <rect>
        <x>230</x>
-       <y>30</y>
-       <width>91</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>🢧</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_2">
-     <property name="geometry">
-      <rect>
-       <x>120</x>
-       <y>60</y>
-       <width>101</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>↓</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton">
-     <property name="geometry">
-      <rect>
-       <x>120</x>
-       <y>10</y>
-       <width>101</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>↑</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_4">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>30</y>
-       <width>81</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>🢤</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="checkBox">
-     <property name="geometry">
-      <rect>
-       <x>230</x>
-       <y>90</y>
+       <y>80</y>
        <width>121</width>
        <height>20</height>
       </rect>
@@ -103,14 +51,73 @@
       <string>Keyboard Control</string>
      </property>
     </widget>
+    <widget class="QWidget" name="gridLayoutWidget_3">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>10</y>
+       <width>201</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="0" column="1">
+       <widget class="QPushButton" name="upButton">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>↑</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QPushButton" name="downButton">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>↓</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="noneButton">
+        <property name="text">
+         <string>O</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QPushButton" name="rightButton">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>🢧</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="leftButton">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>🢤</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
    </widget>
    <widget class="QGroupBox" name="groupBox_4">
     <property name="geometry">
      <rect>
       <x>370</x>
       <y>10</y>
-      <width>341</width>
-      <height>221</height>
+      <width>241</width>
+      <height>201</height>
      </rect>
     </property>
     <property name="title">
@@ -121,18 +128,18 @@
       <rect>
        <x>10</x>
        <y>20</y>
-       <width>321</width>
-       <height>191</height>
+       <width>221</width>
+       <height>171</height>
       </rect>
      </property>
     </widget>
    </widget>
-   <widget class="QPushButton" name="pushButton_5">
+   <widget class="QPushButton" name="stopButton">
     <property name="geometry">
      <rect>
-      <x>380</x>
-      <y>290</y>
-      <width>321</width>
+      <x>370</x>
+      <y>270</y>
+      <width>231</width>
       <height>31</height>
      </rect>
     </property>
@@ -146,32 +153,19 @@
       <x>10</x>
       <y>10</y>
       <width>351</width>
-      <height>91</height>
+      <height>71</height>
      </rect>
     </property>
     <property name="title">
      <string>Connection Status</string>
     </property>
-    <widget class="QPushButton" name="connectButton">
-     <property name="geometry">
-      <rect>
-       <x>190</x>
-       <y>60</y>
-       <width>151</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Connect</string>
-     </property>
-    </widget>
     <widget class="QLabel" name="statusLabel">
      <property name="geometry">
       <rect>
        <x>10</x>
        <y>20</y>
-       <width>161</width>
-       <height>51</height>
+       <width>101</width>
+       <height>31</height>
       </rect>
      </property>
      <property name="text">
@@ -181,21 +175,15 @@
     <widget class="QWidget" name="gridLayoutWidget">
      <property name="geometry">
       <rect>
-       <x>190</x>
+       <x>110</x>
        <y>10</y>
-       <width>151</width>
+       <width>231</width>
        <height>50</height>
       </rect>
      </property>
      <layout class="QGridLayout" name="gridLayout">
       <item row="0" column="1">
-       <widget class="QComboBox" name="PortComboBox">
-        <item>
-         <property name="text">
-          <string>COM9</string>
-         </property>
-        </item>
-       </widget>
+       <widget class="QComboBox" name="PortComboBox"/>
       </item>
       <item row="0" column="0">
        <widget class="QLabel" name="label">
@@ -218,6 +206,41 @@
           <string>9600</string>
          </property>
         </item>
+        <item>
+         <property name="text">
+          <string>19200</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>38400</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>57600</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>115200</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>230400</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>460800</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>921600</string>
+         </property>
+        </item>
        </widget>
       </item>
      </layout>
@@ -227,9 +250,9 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>239</y>
+      <y>219</y>
       <width>351</width>
-      <height>91</height>
+      <height>81</height>
      </rect>
     </property>
     <property name="title">
@@ -241,12 +264,15 @@
        <x>19</x>
        <y>19</y>
        <width>321</width>
-       <height>61</height>
+       <height>51</height>
       </rect>
      </property>
      <layout class="QGridLayout" name="gridLayout_2">
       <property name="sizeConstraint">
        <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
+      </property>
+      <property name="spacing">
+       <number>0</number>
       </property>
       <item row="1" column="0">
        <widget class="QLabel" name="label_5">
@@ -271,13 +297,26 @@
      </layout>
     </widget>
    </widget>
+   <widget class="QPushButton" name="connectButton">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>232</y>
+      <width>231</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>START</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>717</width>
+     <width>622</width>
      <height>17</height>
     </rect>
    </property>
@@ -286,9 +325,9 @@
      <string>File</string>
     </property>
     <addaction name="separator"/>
-    <addaction name="actionExit"/>
+    <addaction name="actionSave"/>
     <addaction name="actionSave_Config_As"/>
-    <addaction name="actionExit_2"/>
+    <addaction name="actionExit"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
@@ -300,13 +339,13 @@
     <property name="title">
      <string>View</string>
     </property>
+    <addaction name="separator"/>
     <addaction name="actionAdvanced_View"/>
    </widget>
    <widget class="QMenu" name="menuHelp_2">
     <property name="title">
      <string>Tools</string>
     </property>
-    <addaction name="separator"/>
     <addaction name="actionClear_cache"/>
    </widget>
    <widget class="QMenu" name="menuHelp_3">
@@ -316,7 +355,7 @@
     <addaction name="actionAbout"/>
     <addaction name="actionCheck_Updates"/>
     <addaction name="separator"/>
-    <addaction name="actionPTZ_Control_Help"/>
+    <addaction name="actionHelp"/>
    </widget>
    <addaction name="menuMain_Page"/>
    <addaction name="menuHelp"/>
@@ -325,7 +364,7 @@
    <addaction name="menuHelp_3"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionExit">
+  <action name="actionSave">
    <property name="text">
     <string>Save Config</string>
    </property>
@@ -360,12 +399,12 @@
     <string>Save Config As..</string>
    </property>
   </action>
-  <action name="actionExit_2">
+  <action name="actionExit">
    <property name="text">
     <string>Exit</string>
    </property>
   </action>
-  <action name="actionPTZ_Control_Help">
+  <action name="actionHelp">
    <property name="text">
     <string>PTZ Control Help</string>
    </property>

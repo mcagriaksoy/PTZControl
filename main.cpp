@@ -2,6 +2,13 @@
 
 #include <QApplication>
 
+
+void comPortListener(void)
+{
+
+
+}
+
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
