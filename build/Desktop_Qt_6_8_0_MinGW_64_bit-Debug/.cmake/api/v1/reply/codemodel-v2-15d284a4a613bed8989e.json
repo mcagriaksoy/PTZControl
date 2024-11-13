@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-1538d85bb124e6dde757.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "PTZControl",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "PTZControl::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-PTZControl-Debug-d79fdf6ad32c3adf4609.json",
+					"name" : "PTZControl",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "PTZControl_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-PTZControl_autogen-Debug-9f443ee11c70de600ea9.json",
+					"name" : "PTZControl_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "PTZControl_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-PTZControl_autogen_timestamp_deps-Debug-a88051dd6e010d9162b5.json",
+					"name" : "PTZControl_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Projects/Qt_playground/PTZControl/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug",
+		"source" : "C:/Projects/Qt_playground/PTZControl"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
