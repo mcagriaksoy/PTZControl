@@ -138,6 +138,9 @@
     </widget>
    </widget>
    <widget class="QPushButton" name="stopButton">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>370</x>
@@ -258,9 +261,9 @@
    <widget class="QGroupBox" name="groupBox_2">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>10</x>
       <y>220</y>
-      <width>361</width>
+      <width>351</width>
       <height>101</height>
      </rect>
     </property>
@@ -272,7 +275,7 @@
       <rect>
        <x>10</x>
        <y>40</y>
-       <width>341</width>
+       <width>331</width>
        <height>51</height>
       </rect>
      </property>

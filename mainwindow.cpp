@@ -23,6 +23,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->actionAdvanced_View, &QAction::triggered, this, &MainWindow::on_advancedViewButton_clicked);
     connect(ui->actionHelp, &QAction::triggered, this, [this]() { QMessageBox::information(this, "Help",
      "More information at: github.com/mcagriaksoy"); });
+     connect(ui->actionClear_cache, &QAction::triggered, this, [this]() { ui->textBrowser->clear(); });
 
     // PT Movements
     connect(ui->upButton, &QPushButton::clicked, this, [this]() { on_movement_handler("FF010008101029"); });
@@ -82,7 +83,9 @@ void MainWindow::detectSerialPorts()
 
 void MainWindow::on_connectButton_clicked()
 {
-    // Connect to the camera
+    // Disable Stop button
+    ui->stopButton->setEnabled(true);
+
     // Get the data from comboboxes
     // Extract port from all text detect COM text and extract port number
     QString port = ui->PortComboBox->currentText().split(" - ")[0];
@@ -132,6 +135,9 @@ void MainWindow::on_connectButton_clicked()
 
 void MainWindow::on_stopButton_clicked()
 {
+    // Enable Start button
+    ui->connectButton->setEnabled(true);
+
     // Stop the COM port listener and worker thread
     if (workerThread) {
         workerThread->quit();
