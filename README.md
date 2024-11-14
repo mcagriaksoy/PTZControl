@@ -1,4 +1,4 @@
-# Pan Tilt Zoom Control Software
+# ![icon](img/icon.ico) Pan Tilt Zoom Control Software
 
 ## Overview
 The Pan Tilt Zoom (PTZ) Control Software allows you to control your PTZ cameras through a single, user-friendly interface. This application provides seamless control over the pan, tilt, and zoom functionalities of your cameras, making it ideal for surveillance, live streaming, and other applications requiring precise camera movements.
