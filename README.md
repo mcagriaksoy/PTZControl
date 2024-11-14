@@ -16,10 +16,7 @@ The Pan Tilt Zoom (PTZ) Control Software allows you to control your PTZ cameras 
 
 ## Installation
 ### Prerequisites
-[![PyQt - >= 6.0](https://img.shields.io/badge/PyQt->_6.0-2ea44f)](https://wiki.python.org/moin/PyQt)
-[![PyQt_sip - >= 13.0](https://img.shields.io/badge/PyQt_sip->_13.0-2ea44f)](https://pypi.org/project/PyQt6-sip/)
-[![PySerial - >= 3.0](https://img.shields.io/badge/PyQt->_3.0-2ea44f)](https://pypi.org/project/pyserial/)
-
+[![Qt - >= 6.0](https://img.shields.io/badge/Qt->_6.0-2ea44f)]([https://wiki.python.org/moin/PyQt](https://www.qt.io/product/qt6))
 
 ## Configuration
 - **Preset Positions**: Define and manage preset positions in the UI.
