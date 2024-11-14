@@ -14,6 +14,8 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS SerialPort)
 
+set(app_icon_resource_windows "${CMAKE_CURRENT_SOURCE_DIR}/resources/resources.qrc")
+
 set(PROJECT_SOURCES
         main.cpp
         mainwindow.cpp
@@ -27,7 +29,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         ${PROJECT_SOURCES}
         serialportworker.cpp
         serialportworker.h
-        resources.qrc
+        resources/resources.qrc
+        resources/icon.rc
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET PTZControl APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
