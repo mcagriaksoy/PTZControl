@@ -7,8 +7,20 @@
     <x>0</x>
     <y>0</y>
     <width>622</width>
-    <height>402</height>
+    <height>401</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>622</width>
+    <height>401</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>622</width>
+    <height>401</height>
+   </size>
   </property>
   <property name="font">
    <font>
@@ -19,8 +31,18 @@
   <property name="windowTitle">
    <string>PTZ Control</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icon.ico</normaloff>icon.ico</iconset>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>48</width>
+    <height>48</height>
+   </size>
+  </property>
   <property name="toolButtonStyle">
-   <enum>Qt::ToolButtonStyle::ToolButtonFollowStyle</enum>
+   <enum>Qt::ToolButtonStyle::ToolButtonIconOnly</enum>
   </property>
   <property name="tabShape">
    <enum>QTabWidget::TabShape::Rounded</enum>
@@ -53,8 +75,17 @@
         <property name="enabled">
          <bool>false</bool>
         </property>
+        <property name="statusTip">
+         <string>This button is used to stop movement (It will send the PELCO-D Stop message)</string>
+        </property>
+        <property name="whatsThis">
+         <string>This button is used to stop movement (It will send the PELCO-D Stop message)</string>
+        </property>
         <property name="text">
-         <string>O</string>
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset theme="media-record"/>
         </property>
        </widget>
       </item>
@@ -64,7 +95,10 @@
          <bool>false</bool>
         </property>
         <property name="text">
-         <string>🢧</string>
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset theme="QIcon::ThemeIcon::GoNext"/>
         </property>
        </widget>
       </item>
@@ -74,7 +108,10 @@
          <bool>false</bool>
         </property>
         <property name="text">
-         <string>↓</string>
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset theme="QIcon::ThemeIcon::GoDown"/>
         </property>
        </widget>
       </item>
@@ -84,7 +121,10 @@
          <bool>false</bool>
         </property>
         <property name="text">
-         <string>↑</string>
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset theme="QIcon::ThemeIcon::GoUp"/>
         </property>
        </widget>
       </item>
@@ -94,7 +134,10 @@
          <bool>false</bool>
         </property>
         <property name="text">
-         <string>🢤</string>
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset theme="QIcon::ThemeIcon::GoPrevious"/>
         </property>
        </widget>
       </item>
@@ -108,6 +151,9 @@
        <width>121</width>
        <height>20</height>
       </rect>
+     </property>
+     <property name="statusTip">
+      <string>This option enables the Keyboard control to control PT via keyboard instead of buttons</string>
      </property>
      <property name="text">
       <string>Keyboard Control</string>
@@ -135,29 +181,16 @@
        <height>171</height>
       </rect>
      </property>
+     <property name="statusTip">
+      <string>The Logs will be displayed here when the connection has been established.</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Shape::NoFrame</enum>
+     </property>
+     <property name="acceptRichText">
+      <bool>false</bool>
+     </property>
     </widget>
-   </widget>
-   <widget class="QPushButton" name="stopButton">
-    <property name="enabled">
-     <bool>false</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>370</x>
-      <y>320</y>
-      <width>241</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Bahnschrift</family>
-      <pointsize>10</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>STOP</string>
-    </property>
    </widget>
    <widget class="QGroupBox" name="groupBox_5">
     <property name="geometry">
@@ -305,12 +338,18 @@
         <property name="enabled">
          <bool>false</bool>
         </property>
+        <property name="frame">
+         <bool>true</bool>
+        </property>
        </widget>
       </item>
       <item row="1" column="1">
        <widget class="QLineEdit" name="rightLineEdit">
         <property name="enabled">
          <bool>false</bool>
+        </property>
+        <property name="frame">
+         <bool>true</bool>
         </property>
        </widget>
       </item>
@@ -325,29 +364,13 @@
        <height>20</height>
       </rect>
      </property>
+     <property name="statusTip">
+      <string>This option enables the PRESET Functionality to set-reset limits.</string>
+     </property>
      <property name="text">
-      <string>Enable PRESET functionality</string>
+      <string>PRESET functionality</string>
      </property>
     </widget>
-   </widget>
-   <widget class="QPushButton" name="connectButton">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>320</y>
-      <width>231</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Bahnschrift</family>
-      <pointsize>10</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>START</string>
-    </property>
    </widget>
    <widget class="QGroupBox" name="groupBox_3">
     <property name="geometry">
@@ -367,7 +390,7 @@
        <x>10</x>
        <y>12</y>
        <width>221</width>
-       <height>81</height>
+       <height>83</height>
       </rect>
      </property>
      <layout class="QGridLayout" name="gridLayout_4">
@@ -401,13 +424,91 @@
       </item>
       <item row="0" column="1">
        <widget class="QPushButton" name="stopAllButton">
+        <property name="statusTip">
+         <string>This button is used to stop movement (It will send the PELCO-D Stop message)</string>
+        </property>
+        <property name="whatsThis">
+         <string>This button is used to stop movement (It will send the PELCO-D Stop message)</string>
+        </property>
         <property name="text">
-         <string>Stop All movement</string>
+         <string>Stop Movement</string>
         </property>
        </widget>
       </item>
      </layout>
     </widget>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>320</y>
+      <width>221</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="connectButton">
+       <property name="font">
+        <font>
+         <family>Bahnschrift</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string>Please click if you want to connect the remote PT device with selected Port-Baudrate Configuration</string>
+       </property>
+       <property name="statusTip">
+        <string>Please click if you want to connect the remote PT device with selected Port-Baudrate Configuration</string>
+       </property>
+       <property name="whatsThis">
+        <string>Please click if you want to connect the remote PT device with selected Port-Baudrate Configuration</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>START</string>
+       </property>
+       <property name="icon">
+        <iconset theme="QIcon::ThemeIcon::DocumentSend"/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="stopButton">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string>Please click if you want to disconnect the remote PT device.</string>
+       </property>
+       <property name="statusTip">
+        <string>Please click if you want to disconnect the remote PT device.</string>
+       </property>
+       <property name="text">
+        <string>STOP</string>
+       </property>
+       <property name="icon">
+        <iconset theme="QIcon::ThemeIcon::ApplicationExit"/>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -424,6 +525,8 @@
      <string>File</string>
     </property>
     <addaction name="separator"/>
+    <addaction name="actionNew"/>
+    <addaction name="actionOpen"/>
     <addaction name="actionSave"/>
     <addaction name="actionSave_Config_As"/>
     <addaction name="actionExit"/>
@@ -506,6 +609,16 @@
   <action name="actionHelp">
    <property name="text">
     <string>PTZ Control Help</string>
+   </property>
+  </action>
+  <action name="actionNew">
+   <property name="text">
+    <string>New</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open..</string>
    </property>
   </action>
  </widget>

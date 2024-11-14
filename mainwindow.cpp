@@ -12,6 +12,10 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     this->setFocusPolicy(Qt::StrongFocus);
 
+    // SetIcon
+    QIcon icon(":/img/icon.ico");
+    this->setWindowIcon(icon);
+
     connect(ui->connectButton, &QPushButton::clicked, this, &MainWindow::on_connectButton_clicked);
     connect(ui->stopButton, &QPushButton::clicked, this, &MainWindow::on_stopButton_clicked);
     
