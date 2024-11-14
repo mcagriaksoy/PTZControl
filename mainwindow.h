@@ -6,6 +6,8 @@
 #include <QThread>
 #include <QKeyEvent>
 
+#define APP_VERSION "1.1.0"
+
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;

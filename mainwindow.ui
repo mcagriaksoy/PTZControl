@@ -57,6 +57,12 @@
       <height>121</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Verdana</family>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
     <property name="title">
      <string>PT Movements</string>
     </property>
@@ -69,11 +75,23 @@
        <height>111</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Verdana</family>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
      <layout class="QGridLayout" name="gridLayout_3">
       <item row="1" column="1">
        <widget class="QPushButton" name="noneButton">
         <property name="enabled">
          <bool>false</bool>
+        </property>
+        <property name="font">
+         <font>
+          <family>Verdana</family>
+          <pointsize>8</pointsize>
+         </font>
         </property>
         <property name="statusTip">
          <string>This button is used to stop movement (It will send the PELCO-D Stop message)</string>
@@ -94,6 +112,12 @@
         <property name="enabled">
          <bool>false</bool>
         </property>
+        <property name="font">
+         <font>
+          <family>Verdana</family>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
         <property name="text">
          <string/>
         </property>
@@ -106,6 +130,12 @@
        <widget class="QPushButton" name="downButton">
         <property name="enabled">
          <bool>false</bool>
+        </property>
+        <property name="font">
+         <font>
+          <family>Verdana</family>
+          <pointsize>8</pointsize>
+         </font>
         </property>
         <property name="text">
          <string/>
@@ -120,6 +150,12 @@
         <property name="enabled">
          <bool>false</bool>
         </property>
+        <property name="font">
+         <font>
+          <family>Verdana</family>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
         <property name="text">
          <string/>
         </property>
@@ -132,6 +168,12 @@
        <widget class="QPushButton" name="leftButton">
         <property name="enabled">
          <bool>false</bool>
+        </property>
+        <property name="font">
+         <font>
+          <family>Verdana</family>
+          <pointsize>8</pointsize>
+         </font>
         </property>
         <property name="text">
          <string/>
@@ -148,15 +190,21 @@
       <rect>
        <x>10</x>
        <y>90</y>
-       <width>121</width>
+       <width>131</width>
        <height>20</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Verdana</family>
+       <pointsize>8</pointsize>
+      </font>
      </property>
      <property name="statusTip">
       <string>This option enables the Keyboard control to control PT via keyboard instead of buttons</string>
      </property>
      <property name="text">
-      <string>Keyboard Control</string>
+      <string>&amp;Keyboard Control</string>
      </property>
     </widget>
    </widget>
@@ -169,6 +217,12 @@
       <height>201</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Verdana</family>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
     <property name="title">
      <string>Created Pelco Command</string>
     </property>
@@ -180,6 +234,12 @@
        <width>221</width>
        <height>171</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Verdana</family>
+       <pointsize>8</pointsize>
+      </font>
      </property>
      <property name="statusTip">
       <string>The Logs will be displayed here when the connection has been established.</string>
@@ -201,6 +261,12 @@
       <height>71</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Verdana</family>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
     <property name="title">
      <string>Connection Status</string>
     </property>
@@ -213,8 +279,14 @@
        <height>31</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Verdana</family>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
      <property name="text">
-      <string>Not Connected Yet</string>
+      <string>Not Connected!</string>
      </property>
     </widget>
     <widget class="QWidget" name="gridLayoutWidget">
@@ -226,26 +298,63 @@
        <height>50</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Verdana</family>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
      <layout class="QGridLayout" name="gridLayout">
       <item row="0" column="1">
-       <widget class="QComboBox" name="PortComboBox"/>
+       <widget class="QComboBox" name="PortComboBox">
+        <property name="font">
+         <font>
+          <family>Verdana</family>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+       </widget>
       </item>
       <item row="0" column="0">
        <widget class="QLabel" name="label">
+        <property name="font">
+         <font>
+          <family>Verdana</family>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
         <property name="text">
-         <string>Port:</string>
+         <string>&amp;Port:</string>
+        </property>
+        <property name="buddy">
+         <cstring>PortComboBox</cstring>
         </property>
        </widget>
       </item>
       <item row="1" column="0">
        <widget class="QLabel" name="label_3">
+        <property name="font">
+         <font>
+          <family>Verdana</family>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
         <property name="text">
-         <string>Baudrate:</string>
+         <string>&amp;Baudrate:</string>
+        </property>
+        <property name="buddy">
+         <cstring>BaudrateComboBox</cstring>
         </property>
        </widget>
       </item>
       <item row="1" column="1">
        <widget class="QComboBox" name="BaudrateComboBox">
+        <property name="font">
+         <font>
+          <family>Verdana</family>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
         <item>
          <property name="text">
           <string>9600</string>
@@ -300,6 +409,12 @@
       <height>101</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Verdana</family>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
     <property name="title">
      <string>Set Limits</string>
     </property>
@@ -312,6 +427,12 @@
        <height>51</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Verdana</family>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
      <layout class="QGridLayout" name="gridLayout_2">
       <property name="sizeConstraint">
        <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
@@ -321,6 +442,12 @@
       </property>
       <item row="0" column="0">
        <widget class="QLabel" name="label_4">
+        <property name="font">
+         <font>
+          <family>Verdana</family>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
         <property name="text">
          <string>Set Left Limit (Degree°)</string>
         </property>
@@ -328,6 +455,12 @@
       </item>
       <item row="1" column="0">
        <widget class="QLabel" name="label_5">
+        <property name="font">
+         <font>
+          <family>Verdana</family>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
         <property name="text">
          <string>Set Right Limit (Degree°)</string>
         </property>
@@ -338,6 +471,12 @@
         <property name="enabled">
          <bool>false</bool>
         </property>
+        <property name="font">
+         <font>
+          <family>Verdana</family>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
         <property name="frame">
          <bool>true</bool>
         </property>
@@ -347,6 +486,12 @@
        <widget class="QLineEdit" name="rightLineEdit">
         <property name="enabled">
          <bool>false</bool>
+        </property>
+        <property name="font">
+         <font>
+          <family>Verdana</family>
+          <pointsize>8</pointsize>
+         </font>
         </property>
         <property name="frame">
          <bool>true</bool>
@@ -361,14 +506,20 @@
        <x>10</x>
        <y>20</y>
        <width>171</width>
-       <height>20</height>
+       <height>16</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Verdana</family>
+       <pointsize>8</pointsize>
+      </font>
      </property>
      <property name="statusTip">
       <string>This option enables the PRESET Functionality to set-reset limits.</string>
      </property>
      <property name="text">
-      <string>PRESET functionality</string>
+      <string>P&amp;RESET functionality</string>
      </property>
     </widget>
    </widget>
@@ -380,6 +531,12 @@
       <width>241</width>
       <height>101</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Verdana</family>
+      <pointsize>8</pointsize>
+     </font>
     </property>
     <property name="title">
      <string>Focus/Zoom</string>
@@ -393,9 +550,21 @@
        <height>83</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Verdana</family>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
      <layout class="QGridLayout" name="gridLayout_4">
       <item row="1" column="0">
        <widget class="QPushButton" name="zoomInButton">
+        <property name="font">
+         <font>
+          <family>Verdana</family>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
         <property name="text">
          <string>Zoom in</string>
         </property>
@@ -403,6 +572,12 @@
       </item>
       <item row="2" column="1">
        <widget class="QPushButton" name="focusOutButton">
+        <property name="font">
+         <font>
+          <family>Verdana</family>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
         <property name="text">
          <string>Focus far</string>
         </property>
@@ -410,6 +585,12 @@
       </item>
       <item row="1" column="1">
        <widget class="QPushButton" name="zoomOutButton">
+        <property name="font">
+         <font>
+          <family>Verdana</family>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
         <property name="text">
          <string>Zoom out</string>
         </property>
@@ -417,6 +598,12 @@
       </item>
       <item row="2" column="0">
        <widget class="QPushButton" name="focusInButton">
+        <property name="font">
+         <font>
+          <family>Verdana</family>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
         <property name="text">
          <string>Focus near</string>
         </property>
@@ -424,6 +611,12 @@
       </item>
       <item row="0" column="1">
        <widget class="QPushButton" name="stopAllButton">
+        <property name="font">
+         <font>
+          <family>Verdana</family>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
         <property name="statusTip">
          <string>This button is used to stop movement (It will send the PELCO-D Stop message)</string>
         </property>
@@ -447,11 +640,29 @@
       <height>41</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Verdana</family>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
       <spacer name="horizontalSpacer">
+       <property name="font">
+        <font>
+         <family>Verdana</family>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
        <property name="orientation">
         <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
        </property>
       </spacer>
      </item>
@@ -459,7 +670,7 @@
       <widget class="QPushButton" name="connectButton">
        <property name="font">
         <font>
-         <family>Bahnschrift</family>
+         <family>Verdana</family>
          <pointsize>10</pointsize>
         </font>
        </property>
@@ -490,7 +701,7 @@
        </property>
        <property name="font">
         <font>
-         <family>Bahnschrift</family>
+         <family>Verdana</family>
          <pointsize>10</pointsize>
         </font>
        </property>
@@ -520,108 +731,130 @@
      <height>17</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuMain_Page">
+   <widget class="QMenu" name="menuFile">
     <property name="title">
-     <string>File</string>
+     <string>&amp;File</string>
     </property>
     <addaction name="separator"/>
     <addaction name="actionNew"/>
+    <addaction name="separator"/>
     <addaction name="actionOpen"/>
     <addaction name="actionSave"/>
     <addaction name="actionSave_Config_As"/>
     <addaction name="actionExit"/>
    </widget>
-   <widget class="QMenu" name="menuHelp">
+   <widget class="QMenu" name="menuOptions">
     <property name="title">
-     <string>Options</string>
+     <string>&amp;Options</string>
     </property>
     <addaction name="actionSerial_Port"/>
    </widget>
    <widget class="QMenu" name="menuView">
     <property name="title">
-     <string>View</string>
+     <string>&amp;View</string>
     </property>
     <addaction name="separator"/>
     <addaction name="actionAdvanced_View"/>
    </widget>
-   <widget class="QMenu" name="menuHelp_2">
+   <widget class="QMenu" name="menuTools">
     <property name="title">
-     <string>Tools</string>
+     <string>&amp;Tools</string>
     </property>
     <addaction name="actionClear_cache"/>
    </widget>
-   <widget class="QMenu" name="menuHelp_3">
+   <widget class="QMenu" name="menuHelp">
     <property name="title">
-     <string>Help</string>
+     <string>&amp;Help</string>
     </property>
     <addaction name="actionAbout"/>
     <addaction name="actionCheck_Updates"/>
     <addaction name="separator"/>
     <addaction name="actionHelp"/>
    </widget>
-   <addaction name="menuMain_Page"/>
-   <addaction name="menuHelp"/>
+   <addaction name="menuFile"/>
+   <addaction name="menuOptions"/>
    <addaction name="menuView"/>
-   <addaction name="menuHelp_2"/>
-   <addaction name="menuHelp_3"/>
+   <addaction name="menuTools"/>
+   <addaction name="menuHelp"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionSave">
    <property name="text">
-    <string>Save Config</string>
+    <string>&amp;Save Config</string>
    </property>
   </action>
   <action name="actionAbout">
    <property name="text">
-    <string>About</string>
+    <string>A&amp;bout</string>
    </property>
   </action>
   <action name="actionCheck_Updates">
    <property name="text">
-    <string>Check Updates</string>
+    <string>Check &amp;Updates</string>
    </property>
   </action>
   <action name="actionClear_cache">
    <property name="text">
-    <string>Clear cache</string>
+    <string>&amp;Clear cache</string>
    </property>
   </action>
   <action name="actionAdvanced_View">
    <property name="text">
-    <string>Advanced View</string>
+    <string>A&amp;dvanced View</string>
    </property>
   </action>
   <action name="actionSerial_Port">
    <property name="text">
-    <string>Serial Port</string>
+    <string>Serial &amp;Port Advanced</string>
    </property>
   </action>
   <action name="actionSave_Config_As">
    <property name="text">
-    <string>Save Config As..</string>
+    <string>Save Config &amp;As..</string>
    </property>
   </action>
   <action name="actionExit">
    <property name="text">
-    <string>Exit</string>
+    <string>&amp;Exit</string>
    </property>
   </action>
   <action name="actionHelp">
    <property name="text">
-    <string>PTZ Control Help</string>
+    <string>PTZ Control &amp;Help</string>
    </property>
   </action>
   <action name="actionNew">
    <property name="text">
-    <string>New</string>
+    <string>&amp;New</string>
    </property>
   </action>
   <action name="actionOpen">
    <property name="text">
-    <string>Open..</string>
+    <string>&amp;Open..</string>
    </property>
   </action>
  </widget>
+ <tabstops>
+  <tabstop>PortComboBox</tabstop>
+  <tabstop>BaudrateComboBox</tabstop>
+  <tabstop>upButton</tabstop>
+  <tabstop>noneButton</tabstop>
+  <tabstop>leftButton</tabstop>
+  <tabstop>rightButton</tabstop>
+  <tabstop>downButton</tabstop>
+  <tabstop>keyboardCheckBox</tabstop>
+  <tabstop>presetEnableCheckBox</tabstop>
+  <tabstop>leftLineEdit</tabstop>
+  <tabstop>rightLineEdit</tabstop>
+  <tabstop>stopAllButton</tabstop>
+  <tabstop>zoomInButton</tabstop>
+  <tabstop>zoomOutButton</tabstop>
+  <tabstop>focusInButton</tabstop>
+  <tabstop>focusOutButton</tabstop>
+  <tabstop>connectButton</tabstop>
+  <tabstop>stopButton</tabstop>
+  <tabstop>textBrowser</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

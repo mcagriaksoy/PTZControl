@@ -168,29 +168,44 @@ void MainWindow::on_stopButton_clicked()
 void MainWindow::on_saveConfigAsButton_clicked()
 {
     // Save the configuration to a file
+    // Todo: Implement this feature
 }
 
 void MainWindow::on_saveButton_clicked()
 {
     // Save the configuration to the same file
+    // Todo: Implement this feature
 }
 
 void MainWindow::on_aboutButton_clicked()
 {
+    QMessageBox aboutBox;
     // Create a popup with information about the application
-    QMessageBox::about(this, "About PTZ Control",
-     "PTZ Control is a simple application to control PTZ cameras. \r\n Written by Mehmet Cagri Aksoy 2024");
+    QString aboutText = "<p>PTZ Control is a simple application to control PTZ cameras.</p>"
+                        "<p>GNU LESSER GENERAL PUBLIC LICENSE - GNU LGPL v3.0 </p>"
+                        "<p>Version: " + QString(APP_VERSION) + " </p>"
+                        "<p>Written by Mehmet Cagri Aksoy - 2024 "
+                        "<a href=\"https://github.com/mcagriaksoy/PTZControl\">GitHub Repository</a></p>";
+    aboutBox.setTextFormat(Qt::RichText); 
+    aboutBox.about(this, "About PTZ Control", aboutText);
 }
 
 void MainWindow::on_checkUpdatesButton_clicked()
 {
     // Check for updates
-    QMessageBox::information(this, "Check Updates", "No updates available.");
+    // Get hhtp request to the github page and check the latest version
+
+    // Todo: Implement this feature
+
+    QMessageBox::information(this, "Check Updates", "No updates available. ");
 }
 
 void MainWindow::on_advancedViewButton_clicked()
 {
     // Show advanced view
+
+    // Todo: Implement this feature
+
     QMessageBox::information(this, "Advanced View", "This feature is not available yet.");
 }
 
